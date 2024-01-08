@@ -68,3 +68,25 @@ public class Item {
 //        drink.add("사이다/사이다입니다.1600.0");
 //        drink.add("환타/환타입니다.1500.0");
 //    }
+
+
+
+
+        System.out.println("pizza zip 에 오신걸 환영합니다.");
+        System.out.println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.\n");
+        System.out.println("1. Pizza              | 피자 입니다.");
+        System.out.println("2. Source             | 소스 입니다.");
+        System.out.println("3. Side               | 사이드 입니다.");
+        System.out.println("4. Drink              | 음료 입니다.");
+        System.out.println("============================================");
+        System.out.println("5. 주문");
+        System.out.println("6. 취소");
+        System.out.println("이동하실 메뉴를 선택 해 주세요.");
+
+1 피자로 들어옴
+1 치즈피자
+1 장바구니에 치즈피자가 추가되었습니다.
+더주문하시려면 상품번호를 이전화면으로 돌아가실려면 9번을 눌러주세요
+
+1
+
