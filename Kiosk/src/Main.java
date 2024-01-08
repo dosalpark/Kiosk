@@ -1,10 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("pizza zip 에 오신걸 환영합니다.");
-        System.out.println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.\n");
-
-
-
+//        프로그램이 false일때 실행. 프로그램 종료하려면 true로 변경
+        boolean program = false;
+        //프로그램 실행
+        if (!program) {
+            //초기 메뉴판 출력
+            Product.firstMenu();
+            //메뉴 선택 시작
+            Product.start();
+        }
     }
 }

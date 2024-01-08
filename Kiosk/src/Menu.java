@@ -1,12 +1,12 @@
-public class Menu {
-    String name;
-    String description;
-
-//    public String getName() {
-//        return name;
-//    }
+//public class Menu {
+//    String name;
+//    String description;
 //
-//    public String getDescription() {
-//        return description;
-//    }
-}
+////    public String getName() {
+////        return name;
+////    }
+////
+////    public String getDescription() {
+////        return description;
+////    }
+//}
