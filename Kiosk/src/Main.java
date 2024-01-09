@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        //프로그램 시작 값
+//        프로그램 시작 값
         boolean program = false;
         //프로그램 false일때 실행. 프로그램 종료하려면 true로 변경
         if (!program) {
