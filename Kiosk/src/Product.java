@@ -1,64 +1,42 @@
 import java.util.*;
 import java.util.ArrayList;
 
-public class Product extends Menu{
+public class Product{
     //필드설정
-    private String category;
+    private int idx;
+    private String name;
+    private String description;
     private Double price;
-    private static Map<Integer, Product> dataMap = new HashMap<>();
+    //    메뉴별 클래스 생성해서 category 주석
+//    private String category;
+
+
+
+    List<Product> product = new ArrayList<>();
+    static List<Pizza> pizzaList = new ArrayList<>();
+    List<Drink> drinkList = new ArrayList<>();
+    List<Side> sideList = new ArrayList<>();
+    List<Source> sourceList = new ArrayList<>();
+
 
 
 
     //초기메뉴 함수
     public static void firstMenu(){
         //item생성
-        Product chesePizza = new Product("치즈피자","치즈피자입니다.","pizza",10000.0);
-        Product cornPizza = new Product("옥수수피자","옥수수피자입니다.","pizza",11000.0);
-        Product pepePizza= new Product("페퍼로니피자","페퍼로니피자입니다.","pizza",12000.0);
-        Product combiPizza = new Product("콤비네이션피자","콤비네이션피자입니다.","pizza",12000.0);
-        Product hotSource = new Product("핫소스","핫소스입니다..","source",300.0);
-        Product parmSource = new Product("파마산치즈","파마산치즈가루입니다..","source",200.0);
-        Product garicSource = new Product("갈락디핑소스","갈릭디핑소스입니다..","source",500.0);
-        Product wingSide = new Product("윙","윙입니다..","side",8000.0);
-        Product bongSide = new Product("봉","봉입니다..","side",9000.0);
-        Product cheseSide = new Product("치즈스틱","치즈스틱입니다..","side",5000.0);
-        Product potatoSide = new Product("감자튀김","감자튀김입니다..","side",4000.0);
-        Product cokeDrink = new Product("콜라","콜라입니다.","drink",1600.0);
-        Product zerocokeDrink = new Product("제로콜라","제로콜라입니다.","drink",1800.0);
-        Product siderDrink = new Product("사이다","사이다입니다.","drink",1600.0);
-        Product zerosiderDrink = new Product("제로사이다","제로사이다입니다.","drink",1800.0);
-        dataMap.put(0, chesePizza);
+        pizzaList.add(new Pizza(1,"치즈피자","치즈피자입니다.",10.0));
+        pizzaList.add(new Pizza(2,"옥수수피자","옥수수피자입니다.",11.0));
+        pizzaList.add(new Pizza(3,"페퍼로니피자","페퍼로니피자입니다.",12.0));
+        pizzaList.add(new Pizza(4,"콤비네이션피자","콤비네이션피자입니다.",12.0));
 
-//        List<Product> pizzaMenu = new ArrayList<>();
-//        List<Product> pizza = new ArrayList<>();
-//        pizzaMenu.add("치즈피자/치즈피자입니다.10000.0");
-//        pizzaMenu.add("옥수수피자/옥수수피자입니다.11000.0");
-//        pizzaMenu.add("페퍼로니피자/페퍼로니피자입니다.12000.0");
-//        pizzaMenu.add("콤비네이션피자/콤비네이션피자입니다.12000.0");
-//        List<Product> source = Arrays.asList(new Product("핫소스", "핫소스입니다.", "sourece",300.0));
-//        List<String> source = new ArrayList<>();
-//        source.add("핫소스/핫소스입니다.300.0");
-//        source.add("파마산치즈/파마산치즈입니다.200.0");
-//        source.add("갈릭디핑/갈릭디핑입니다.500.0");
-//        List<Product> side = Arrays.asList(new Product("윙", "윙입니다.", "side",300.0));
-//        List<String> side = new ArrayList<>();
-//        side.add("윙/윙입니다..8000.0");
-//        side.add("봉/봉입니다..9000.0");
-//        side.add("치즈스틱/치즈스틱입니다.5000.0");
-//        side.add("감자튀김/감자튀김입니다.4000.0");
-//        List<Product> drink = Arrays.asList(new Product("콜라", "콜라입니다.", "drink",1600.0));
-//        List<String> drink = new ArrayList<>();
-//        drink.add("콜라/콜라입니다.1600.0");
-//        drink.add("제로콜라/제로콜라입니다.1800.0");
-//        drink.add("사이다/사이다입니다.1600.0");
-//        drink.add("제로사이다/제로사이다입니다.1800.0");
+
 
 
         System.out.println("============================================");
         System.out.println("pizza zip 에 오신걸 환영합니다.");
         System.out.println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.");
         System.out.println("============================================");
-        System.out.println("1. Pizza              | 피자 입니다.");
+        System.out.println("1. Food              | 피자 입니다.");
         System.out.println("2. Source             | 소스 입니다.");
         System.out.println("3. Side               | 사이드 입니다.");
         System.out.println("4. Drink              | 음료 입니다.");
@@ -82,7 +60,7 @@ public class Product extends Menu{
         switch(user) {
             case "1":
                 // 메뉴 출력
-                System.out.println("[1. Pizza ]");
+                System.out.println("[1. Food ]");
                 System.out.println("=====================================================");
                 System.out.println("1. 치즈피자        치즈피자 입니다.           10000.0");
                 System.out.println("2. 옥수수피자      옥수수피자 입니다.          11000.0");
@@ -99,7 +77,8 @@ public class Product extends Menu{
                     //유저가 0을 입력하지 않았을때는 장바구니에 추가
                     //위에서 고른 메뉴 장바구니에 추가하면서 메세지 출력
 //                  //장바구니 담는 로직
-                    System.out.println(dataMap.get(0));
+                    getPizzaOrder(i);
+                    System.out.println(pizzaList.get(i));
                     System.out.println("장바구니에 추가되었습니다.");
                     System.out.println("더 주문하시려면 상품번호를, 이전화면으로 돌아가실려면 9번을 눌러주세요.");
 
@@ -240,21 +219,23 @@ public class Product extends Menu{
         System.out.println("ord 출력 테스트");
     }
 
+//    public int getPizzaIdx(int idx){
+//        return Food.getIdx();
+//    }
+
+    public static void getPizzaOrder(int i){
+        System.out.println(pizzaList + "이 장바구니에 추가되었습니다.");
+    }
+
 
 
 
     //메소드설정
-    public Product (String name, String description, String category, Double price) {
-        super.name=name;
-        super.description=description;
-        this.category=category;
+    public Product (int idx,String name, String description, Double price) {
+        this.idx=idx;
+        this.name=name;
+        this.description=description;
         this.price=price;
     }
 
-    public String getCategory(){
-        return category;
-    }
-    public Double getPrice(){
-        return price;
-    }
 }
