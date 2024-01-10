@@ -54,7 +54,6 @@ public class Order {
             System.out.println();
             System.out.println("대기번호는 [" + wait + "]번 입니다.");
             System.out.println("3초 후 메뉴판으로 돌아갑니다.");
-
         end(orderList);
     }
     public void removeCart(ArrayList<Food> orderList, Scanner scanner, Product product){

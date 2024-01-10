@@ -1,8 +1,6 @@
 package KioskNew;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Kiosk {
@@ -36,7 +34,8 @@ public class Kiosk {
             int user = scanner.nextInt();
             switch (user) {
                 case 1:
-                    product.menuPizza();
+//                    product.menuPizza();
+                    product.menuPizzaTest(orderList,food);
                     product.pickPizza(orderList, product);
                     break;
                 case 2:
