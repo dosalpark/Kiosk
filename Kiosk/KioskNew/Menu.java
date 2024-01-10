@@ -13,9 +13,7 @@ public class Menu {
 
     public Menu() {
     }
-    public int getIdx() {
-        return idx;
-    }
+
     public String getName() {
         return name;
     }

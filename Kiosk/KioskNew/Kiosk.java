@@ -34,8 +34,7 @@ public class Kiosk {
             int user = scanner.nextInt();
             switch (user) {
                 case 1:
-//                    product.menuPizza();
-                    product.menuPizzaTest(orderList,food);
+                    product.menuPizza();
                     product.pickPizza(orderList, product);
                     break;
                 case 2:

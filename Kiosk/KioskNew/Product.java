@@ -355,28 +355,7 @@ public class Product {
         System.out.println("=====================================================");
         System.out.println("담으실 메뉴를 선택해주세요. ");
     }
-    public void menuPizzaTest(ArrayList<Food> orderlist, Food food) {
-        System.out.println("=====================================================");
-        int idx = 0;
-        String name = "";
-        String description = "";
-        double price =0.0;
-        System.out.println("[1. Pizza ]");
-        for (Food list : orderlist) {
-            idx = list.getIdx();
-            name = list.getName();
-            description = list.getDescription();
-            price = list.getPrice();
-            food.selectFood(idx,name,description,price);
-        }
-        System.out.println("=====================================================");
-        System.out.println("담으실 메뉴를 선택해주세요. ");
-//        System.out.println("1. 치즈피자        치즈피자 입니다.           10000.0");
-//        System.out.println("2. 옥수수피자      옥수수피자 입니다.          11000.0");
-//        System.out.println("3. 페퍼로니피자     페퍼로니피자 입니다.        12000.0");
-//        System.out.println("4. 콤비네이션피자   콤비네이션피자 입니다.       12000.0");
 
-    }
     public void menuSource() {
         System.out.println("[2. Source ]");
         System.out.println("=====================================================");

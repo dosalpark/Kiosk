@@ -15,16 +15,6 @@ public class Food extends Menu {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    //    public void selectFood(int idx, String name, String description, double price){
-//        System.out.println((idx));
-//    }
-    public void selectFood(String name, String description, double price) {
-        System.out.println((name + "||" + price + "||" + description));
-    }
     public String toString() {
         return "   " + super.getName() + "  ||  " + this.getPrice() + "  ||  " + super.getDescription();
     }
